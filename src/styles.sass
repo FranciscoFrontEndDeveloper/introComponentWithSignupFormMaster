@@ -1,5 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 // Front-end Style Guide
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap')
+
 @import '~normalize.css'
 // Layout
 
@@ -12,7 +15,7 @@ $Desktop: 1440px
 
 // Primary
 
-$Red: hsl(0, 100%, 74%) 
+$Red: hsl(0, 100%, 74%)
 $Green: hsl(154, 59%, 51%)
 
 // Accent
@@ -20,7 +23,7 @@ $Blue: hsl(248, 32%, 49%)
 
 // Neutral
 
-$DarkBlue: hsl(249, 10%, 26%) 
+$DarkBlue: hsl(249, 10%, 26%)
 $GrayishBlue: hsl(246, 25%, 77%)
 
 // Typography
@@ -33,3 +36,10 @@ $Fontsize: 16px
 
 // - Family: [Poppins](https://fonts.google.com/specimen/Poppins)
 // - Weights: 400, 500, 600, 700
+*
+ font-family: 'Poppins', sans-serif
+@mixin fontStyles($fontSize, $fontWeight,$color,$textAlign)
+ color: $color
+ font-size: $fontSize
+ font-weight: $fontWeight
+ text-align: $textAlign
