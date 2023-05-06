@@ -4,11 +4,36 @@
   </div>
   <div class="containerForm__form">
     <form action="">
-      <div><input type="text" /></div>
-      <div><input type="text" /></div>
-      <div><input type="text" /></div>
-      <div><input type="text" /></div>
-      <div><input type="button" value="Claim your free trial" /></div>
+      <div>
+        <app-input
+          [InputType]="textInput"
+          [InputPlaceholder]="FirstName"
+        ></app-input>
+      </div>
+      <div>
+        <app-input
+          [InputType]="textInput"
+          [InputPlaceholder]="LastName"
+        ></app-input>
+      </div>
+      <div>
+        <app-input
+          [InputType]="emailInput"
+          [InputPlaceholder]="EmailAddress"
+        ></app-input>
+      </div>
+      <div>
+        <app-input
+          [InputType]="passwordInput"
+          [InputPlaceholder]="Password"
+        ></app-input>
+      </div>
+      <div>
+        <app-input
+          [InputType]="buttonInput"
+          [InputValue]="buttonInputValue"
+        ></app-input>
+      </div>
       <div class="containerForm__warning">
         <p>
           By clicking the button, you are agreeing to our

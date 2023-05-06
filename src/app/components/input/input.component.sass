@@ -1,0 +1,24 @@
+@import '../../../styles'
+.inputForm
+ width: 100%
+
+.inputStyle
+ border: none
+ padding: 10px
+ outline: none
+ border-radius: 5px
+ &:focus
+  border: 1px solid $GrayishBlue
+ &:placeholder-shown
+  @include fontStyles(14px, 700, black, start )
+
+.buttonStyle
+ background: $Green
+ border: none
+ width: 100%
+ padding: 20px 0
+ text-transform: uppercase
+ border-radius: 7px
+ @include fontStyles(20px, 500, #fff, center )
+ &:hover
+  opacity: 0.8
