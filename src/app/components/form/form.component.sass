@@ -1,24 +1,36 @@
 @import '../../../styles'
 .containerForm
- display: flex
- flex-direction: column
- .containerForm__info
+  display: flex
+  flex-direction: column
+  max-width: 700px
+  row-gap: 30px
+.containerForm__info
   strong
-   @include fontStyles(18px , 700 , #fff ,center)
+    @include fontStyles(18px , 700 , #fff ,center)
   p
-   @include fontStyles(14px , 500 , #fff ,center)
-   background: $Blue
-   padding: 15px 40px
-   line-height: 25px
-   border-radius: 15px
- form
+    @include fontStyles(16px , 500 , #fff ,center)
+    background: $Blue
+    padding: 15px 40px
+    line-height: 25px
+    border-radius: 15px
+    box-shadow: 0px 10px 5px 0px $DarkBlue
+form
   background: #fff
   padding: 20px
   border-radius: 10px
- .containerForm__warning
+  display: flex
+  flex-direction: column
+  justify-content: space-around
+  box-shadow: 0px 10px 5px 0px $DarkBlue
+  height: 450px
+.containerForm__warning
   p
-   @include fontStyles(10px, 500, $GrayishBlue, center )
-   line-height: 30px
-   padding: 0 25px
+    @include fontStyles(10px, 500, $GrayishBlue, center )
+    line-height: 30px
+    padding: 0 25px
   strong
-   @include fontStyles(14px, 500, $Red, center )
+    @include fontStyles(14px, 500, $Red, center )
+
+@media only screen and ( min-width: 1440px  )
+  form
+    max-height: 500px

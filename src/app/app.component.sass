@@ -14,6 +14,16 @@
  position: relative
  padding: 0 30px
 
-.sectionText
+.sectionText, .sectionForm
  display: flex
  align-items: center
+ justify-content: center
+
+@media only screen and ( min-width: 1440px  )
+ .containerMain
+  grid-template-columns: repeat(2, 2fr)
+  grid-template-rows: 1fr
+  background: url("../assets/bg-intro-desktop.png")
+  background-color: $Red
+ .sectionText
+  margin-left: 120px
