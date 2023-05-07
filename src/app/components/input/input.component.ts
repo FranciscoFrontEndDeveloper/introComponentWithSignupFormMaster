@@ -13,7 +13,7 @@ export class InputComponent {
   ngOnInit(): void {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
     //Add 'implements OnInit' to the class.
-    if (this.InputType === 'button') {
+    if (this.InputType === 'submit') {
       this.styleInput = 'buttonStyle';
       console.log('es un boton')
     } else {
