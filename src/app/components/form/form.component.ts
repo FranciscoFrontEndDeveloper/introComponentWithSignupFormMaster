@@ -10,13 +10,10 @@ export class FormComponent {
   textInput: string = 'text'
   emailInput: string = 'email'
   passwordInput: string = 'password'
-  // buttonInput: string = 'submit'
-  // buttonInputValue: string = 'Claim your free trial '
   FirstName: string = 'First Name '
   LastName: string = 'Last Name '
   EmailAddress: string = 'Email Address'
   Password: string = 'Password'
-
   formSignUp: any;
 
   constructor(private formBuilder: FormBuilder) {
@@ -29,6 +26,6 @@ export class FormComponent {
   }
 
   onSubmitSignUp() {
-    console.log(this.formSignUp.value)
+    this.formSignUp.value
   }
 }
