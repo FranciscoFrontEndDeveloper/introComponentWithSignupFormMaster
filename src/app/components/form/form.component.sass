@@ -31,6 +31,17 @@ form
   strong
     @include fontStyles(14px, 500, $Red, center )
 
+.buttonStyle
+ background: $Green
+ border: none
+ width: 100%
+ padding: 20px 0
+ text-transform: uppercase
+ border-radius: 7px
+ @include fontStyles(20px, 500, #fff, center )
+ &:hover
+  opacity: 0.8
+
 @media only screen and ( min-width: 1440px  )
   form
     max-height: 500px
