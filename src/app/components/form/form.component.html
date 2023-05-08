@@ -3,29 +3,33 @@
     <p><strong> Try it free 7 days </strong>then $20/mo. thereafter</p>
   </div>
   <div class="containerForm__form">
-    <form action="">
+    <form action="" [formGroup]="formSignUp"  (ngSubmit)="onSubmitSignUp()" #form="ngForm">
       <div>
         <app-input
           [InputType]="textInput"
           [InputPlaceholder]="FirstName"
+          formControlName="firtsname"
         ></app-input>
       </div>
       <div>
         <app-input
           [InputType]="textInput"
           [InputPlaceholder]="LastName"
+          formControlName="lastname"
         ></app-input>
       </div>
       <div>
         <app-input
           [InputType]="emailInput"
           [InputPlaceholder]="EmailAddress"
+          formControlName="email"
         ></app-input>
       </div>
       <div>
         <app-input
           [InputType]="passwordInput"
           [InputPlaceholder]="Password"
+          formControlName="password"
         ></app-input>
       </div>
       <div>
