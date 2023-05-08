@@ -27,4 +27,8 @@ export class FormComponent {
       password: '',
     })
   }
+
+  onSubmitSignUp() {
+    console.log(this.formSignUp.value)
+  }
 }

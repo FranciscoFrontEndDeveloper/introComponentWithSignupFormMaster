@@ -1,1 +1,9 @@
-<input class="inputStyle" [type]="InputType" [placeholder]="InputPlaceholder" [value]="InputValue" [ngClass]="styleInput" />
+<input
+  class="inputStyle"
+  [type]="InputType"
+  [placeholder]="InputPlaceholder"
+  [value]="InputValue"
+  [ngClass]="styleInput"
+  (change)="changeText($event)"
+  [value]="inputValueForm"
+/>
