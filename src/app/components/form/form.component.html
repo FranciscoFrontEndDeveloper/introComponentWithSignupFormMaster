@@ -3,13 +3,19 @@
     <p><strong> Try it free 7 days </strong>then $20/mo. thereafter</p>
   </div>
   <div class="containerForm__form">
-    <form action="" [formGroup]="formSignUp"  (ngSubmit)="onSubmitSignUp()" #form="ngForm">
+    <form
+      action=""
+      [formGroup]="formSignUp"
+      (ngSubmit)="onSubmitSignUp()"
+      #form="ngForm"
+    >
       <div>
         <app-input
           [InputType]="textInput"
           [InputPlaceholder]="FirstName"
           formControlName="firtsname"
         ></app-input>
+        <app-iconerror></app-iconerror>
       </div>
       <div>
         <app-input
@@ -17,6 +23,7 @@
           [InputPlaceholder]="LastName"
           formControlName="lastname"
         ></app-input>
+        <app-iconerror></app-iconerror>
       </div>
       <div>
         <app-input
@@ -24,6 +31,7 @@
           [InputPlaceholder]="EmailAddress"
           formControlName="email"
         ></app-input>
+        <app-iconerror></app-iconerror>
       </div>
       <div>
         <app-input
@@ -31,6 +39,7 @@
           [InputPlaceholder]="Password"
           formControlName="password"
         ></app-input>
+        <app-iconerror></app-iconerror>
       </div>
       <div>
         <button class="buttonStyle" type="submit">Claim your free trial</button>

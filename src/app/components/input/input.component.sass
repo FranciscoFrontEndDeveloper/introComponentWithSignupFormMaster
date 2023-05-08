@@ -1,18 +1,16 @@
 @import '../../../styles'
 
 .inputStyle
- width: 100%
- border: none
- padding: 10px
- outline: none
- border-radius: 5px
- &:focus
-  border: 2px solid $GrayishBlue
- &:placeholder-shown
-  @include fontStyles(14px, 700, black, start )
+  width: 100%
+  border: none
+  padding: 10px
+  outline: none
+  border-radius: 5px
+  position: relative
+  &:focus
+    border: 2px solid $GrayishBlue
+  &:placeholder-shown
+    @include fontStyles(14px, 700, black, start )
 
 .inputRequired
   border: 2px solid $Red
-  
-
-

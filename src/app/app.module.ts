@@ -7,13 +7,15 @@ import { FormComponent } from './components/form/form.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { InputComponent } from './components/input/input.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { IconerrorComponent } from './components/iconerror/iconerror.component';
 @NgModule({
   declarations: [
     AppComponent,
     TextComponent,
     FormComponent,
     FooterComponent,
-    InputComponent
+    InputComponent,
+    IconerrorComponent
   ],
   imports: [
     BrowserModule,
