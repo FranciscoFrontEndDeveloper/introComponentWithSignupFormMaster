@@ -8,6 +8,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { InputComponent } from './components/input/input.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { IconerrorComponent } from './components/iconerror/iconerror.component';
+import { ErrormessgeComponent } from './components/errormessge/errormessge.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -15,7 +16,8 @@ import { IconerrorComponent } from './components/iconerror/iconerror.component';
     FormComponent,
     FooterComponent,
     InputComponent,
-    IconerrorComponent
+    IconerrorComponent,
+    ErrormessgeComponent
   ],
   imports: [
     BrowserModule,

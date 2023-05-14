@@ -35,6 +35,5 @@ export class InputComponent implements ControlValueAccessor {
   @Input('InputValue') InputValue: string = '';
   styleInput: string = '';
   ngOnInit(): void {
-
   }
 }

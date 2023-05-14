@@ -15,7 +15,23 @@
           [InputPlaceholder]="FirstName"
           formControlName="firtsname"
         ></app-input>
-        <app-iconerror></app-iconerror>
+        <app-iconerror
+          *ngIf="
+            (formSignUp.controls['firtsname'].invalid &&
+              (formSignUp.controls['firtsname'].touched ||
+                formSignUp.controls['firtsname'].dirty)) ||
+            formSignUp.controls['firtsname'].valid
+          "
+        ></app-iconerror>
+        <app-errormessge
+          [inputMessageName]="FirstName"
+          *ngIf="
+            (formSignUp.controls['firtsname'].invalid &&
+              (formSignUp.controls['firtsname'].touched ||
+                formSignUp.controls['firtsname'].dirty)) ||
+            formSignUp.controls['firtsname'].valid
+          "
+        ></app-errormessge>
       </div>
       <div>
         <app-input
@@ -23,7 +39,23 @@
           [InputPlaceholder]="LastName"
           formControlName="lastname"
         ></app-input>
-        <app-iconerror></app-iconerror>
+        <app-iconerror
+          *ngIf="
+            (formSignUp.controls['lastname'].invalid &&
+              (formSignUp.controls['lastname'].touched ||
+                formSignUp.controls['lastname'].dirty)) ||
+            submitted
+          "
+        ></app-iconerror>
+        <app-errormessge
+          [inputMessageName]="LastName"
+          *ngIf="
+            (formSignUp.controls['lastname'].invalid &&
+              (formSignUp.controls['lastname'].touched ||
+                formSignUp.controls['lastname'].dirty)) ||
+            submitted
+          "
+        ></app-errormessge>
       </div>
       <div>
         <app-input
@@ -31,7 +63,23 @@
           [InputPlaceholder]="EmailAddress"
           formControlName="email"
         ></app-input>
-        <app-iconerror></app-iconerror>
+        <app-iconerror
+          *ngIf="
+            (formSignUp.controls['email'].invalid &&
+              (formSignUp.controls['email'].touched ||
+                formSignUp.controls['email'].dirty)) ||
+            submitted
+          "
+        ></app-iconerror>
+        <app-errormessge
+          [inputMessageName]="EmailAddress"
+          *ngIf="
+            (formSignUp.controls['email'].invalid &&
+              (formSignUp.controls['email'].touched ||
+                formSignUp.controls['email'].dirty)) ||
+            submitted
+          "
+        ></app-errormessge>
       </div>
       <div>
         <app-input
@@ -39,7 +87,23 @@
           [InputPlaceholder]="Password"
           formControlName="password"
         ></app-input>
-        <app-iconerror></app-iconerror>
+        <app-iconerror
+          *ngIf="
+            (formSignUp.controls['password'].invalid &&
+              (formSignUp.controls['password'].touched ||
+                formSignUp.controls['password'].dirty)) ||
+            submitted
+          "
+        ></app-iconerror>
+        <app-errormessge
+          [inputMessageName]="Password"
+          *ngIf="
+            (formSignUp.controls['password'].invalid &&
+              (formSignUp.controls['password'].touched ||
+                formSignUp.controls['password'].dirty)) ||
+            submitted
+          "
+        ></app-errormessge>
       </div>
       <div>
         <button class="buttonStyle" type="submit">Claim your free trial</button>
