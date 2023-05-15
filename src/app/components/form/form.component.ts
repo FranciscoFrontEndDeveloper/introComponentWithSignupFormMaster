@@ -17,7 +17,11 @@ export class FormComponent {
   formSignUp: any;
   submitted: boolean = false;
   requiredValue: string = '';
-  complementMessaje: string = 'kkkd';
+  styleInputRequired: string = '';
+  inputFirtsNameValid!: boolean;
+  inputLastNameValid: boolean = false;
+  inputEmailValid: boolean = false;
+  inputPasswordValid: boolean = false;
 
   constructor(private formBuilder: FormBuilder) {
     this.createFormSignUp();
@@ -27,33 +31,25 @@ export class FormComponent {
     this.formSignUp = this.formBuilder.group({
       firtsname: ['', Validators.required],
       lastname: ['', Validators.required],
-      email: ['', [Validators.email, Validators.required]],
+      email: ['', [Validators.required]],
       password: ['', Validators.required],
     });
-
-    // this.formSignUp.controls['firtsname'].valueChanges.suscribe((data: any) => {
-    //   console.log(data)
-    // });
   }
 
   onSubmitSignUp() {
-    console.group('email');
-    // console.log(this.formSignUp.controls['firtsname'].status === "INVALID");
-    // console.log(this.formSignUp.controls['lastname'].status === "INVALID");
-    // console.log(this.formSignUp.controls['email'].status === "INVALID");
-    // console.log(this.formSignUp.controls['password'].status === "INVALID");
-
-    console.log(this.formSignUp.controls['firtsname'].invalid);
-    console.log(this.formSignUp.controls['lastname'].invalid);
-    console.log(this.formSignUp.controls['email'].invalid);
-    console.log(this.formSignUp.controls['password'].invalid);
-    console.groupEnd();
-    // console.log(this.formSignUp.valid);
-    if (this.formSignUp.valid) {
-      this.submitted = false;
-    } else {
-      // this.submitted = true;
+    if (this.formSignUp.invalid) {
+      this.inputFirtsNameValid = this.formSignUp.controls['firtsname'].invalid;
+      this.inputLastNameValid = this.formSignUp.controls['lastname'].invalid;
+      this.inputEmailValid = this.formSignUp.controls['email'].invalid;
+      this.inputPasswordValid = this.formSignUp.controls['password'].invalid;
+      this.styleInputRequired = 'inputRequired';
       this.EmailAddress = 'email@example/com';
+    } else if (this.formSignUp.valid) {
+      this.inputFirtsNameValid = this.formSignUp.controls['firtsname'].invalid;
+      this.inputLastNameValid = this.formSignUp.controls['lastname'].invalid;
+      this.inputEmailValid = this.formSignUp.controls['email'].invalid;
+      this.inputPasswordValid = this.formSignUp.controls['password'].invalid;
+      this.styleInputRequired = 'inputStyle';
     }
   }
 }

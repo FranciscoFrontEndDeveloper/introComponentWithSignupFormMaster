@@ -14,23 +14,12 @@
           [InputType]="textInput"
           [InputPlaceholder]="FirstName"
           formControlName="firtsname"
+          [styleInput]="styleInputRequired"
         ></app-input>
-        <app-iconerror
-          *ngIf="
-            (formSignUp.controls['firtsname'].invalid &&
-              (formSignUp.controls['firtsname'].touched ||
-                formSignUp.controls['firtsname'].dirty)) ||
-            formSignUp.controls['firtsname'].valid
-          "
-        ></app-iconerror>
+        <app-iconerror *ngIf="inputFirtsNameValid"></app-iconerror>
         <app-errormessge
           [inputMessageName]="FirstName"
-          *ngIf="
-            (formSignUp.controls['firtsname'].invalid &&
-              (formSignUp.controls['firtsname'].touched ||
-                formSignUp.controls['firtsname'].dirty)) ||
-            formSignUp.controls['firtsname'].valid
-          "
+          *ngIf="inputFirtsNameValid"
         ></app-errormessge>
       </div>
       <div>
@@ -38,23 +27,12 @@
           [InputType]="textInput"
           [InputPlaceholder]="LastName"
           formControlName="lastname"
+          [styleInput]="styleInputRequired"
         ></app-input>
-        <app-iconerror
-          *ngIf="
-            (formSignUp.controls['lastname'].invalid &&
-              (formSignUp.controls['lastname'].touched ||
-                formSignUp.controls['lastname'].dirty)) ||
-            submitted
-          "
-        ></app-iconerror>
+        <app-iconerror *ngIf="inputLastNameValid"></app-iconerror>
         <app-errormessge
           [inputMessageName]="LastName"
-          *ngIf="
-            (formSignUp.controls['lastname'].invalid &&
-              (formSignUp.controls['lastname'].touched ||
-                formSignUp.controls['lastname'].dirty)) ||
-            submitted
-          "
+          *ngIf="inputLastNameValid"
         ></app-errormessge>
       </div>
       <div>
@@ -62,47 +40,26 @@
           [InputType]="emailInput"
           [InputPlaceholder]="EmailAddress"
           formControlName="email"
+          [styleInput]="styleInputRequired"
         ></app-input>
-        <app-iconerror
-          *ngIf="
-            (formSignUp.controls['email'].invalid &&
-              (formSignUp.controls['email'].touched ||
-                formSignUp.controls['email'].dirty)) ||
-            submitted
-          "
-        ></app-iconerror>
+        <app-iconerror *ngIf="inputEmailValid"></app-iconerror>
         <app-errormessge
           [inputMessageName]="EmailAddress"
-          *ngIf="
-            (formSignUp.controls['email'].invalid &&
-              (formSignUp.controls['email'].touched ||
-                formSignUp.controls['email'].dirty)) ||
-            submitted
-          "
+          *ngIf="inputEmailValid"
         ></app-errormessge>
+        
       </div>
       <div>
         <app-input
           [InputType]="passwordInput"
           [InputPlaceholder]="Password"
           formControlName="password"
+          [styleInput]="styleInputRequired"
         ></app-input>
-        <app-iconerror
-          *ngIf="
-            (formSignUp.controls['password'].invalid &&
-              (formSignUp.controls['password'].touched ||
-                formSignUp.controls['password'].dirty)) ||
-            submitted
-          "
-        ></app-iconerror>
+        <app-iconerror *ngIf="inputPasswordValid"></app-iconerror>
         <app-errormessge
           [inputMessageName]="Password"
-          *ngIf="
-            (formSignUp.controls['password'].invalid &&
-              (formSignUp.controls['password'].touched ||
-                formSignUp.controls['password'].dirty)) ||
-            submitted
-          "
+          *ngIf="inputPasswordValid"
         ></app-errormessge>
       </div>
       <div>

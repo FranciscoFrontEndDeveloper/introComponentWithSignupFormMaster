@@ -33,7 +33,7 @@ export class InputComponent implements ControlValueAccessor {
   @Input('InputType') InputType: string = '';
   @Input('InputPlaceholder') InputPlaceholder: string = '';
   @Input('InputValue') InputValue: string = '';
-  styleInput: string = '';
+  @Input('styleInput') styleInput: string = '';
   ngOnInit(): void {
   }
 }
