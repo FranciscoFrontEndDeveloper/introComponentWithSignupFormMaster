@@ -31,12 +31,13 @@ export class FormComponent {
     this.formSignUp = this.formBuilder.group({
       firtsname: ['', Validators.required],
       lastname: ['', Validators.required],
-      email: ['', [Validators.required]],
+      email: ['', [Validators.required, Validators.email]],
       password: ['', Validators.required],
     });
   }
 
   onSubmitSignUp() {
+    console.log(this.formSignUp.controls['email']._rawValidators);
     if (this.formSignUp.invalid) {
       this.inputFirtsNameValid = this.formSignUp.controls['firtsname'].invalid;
       this.inputLastNameValid = this.formSignUp.controls['lastname'].invalid;

@@ -43,11 +43,13 @@
           [styleInput]="styleInputRequired"
         ></app-input>
         <app-iconerror *ngIf="inputEmailValid"></app-iconerror>
-        <app-errormessge
+        <!-- <app-errormessge
           [inputMessageName]="EmailAddress"
           *ngIf="inputEmailValid"
-        ></app-errormessge>
-        
+        ></app-errormessge> -->
+        <div class="errorMessajeContainer" *ngIf="inputEmailValid">
+          <span>look like this is not an email</span>
+        </div>
       </div>
       <div>
         <app-input
